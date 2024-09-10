@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0e68c;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3em;
+            color: #ff6347;
+        }
+        .message {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        .cake {
+            font-size: 100px;
+        }
+        .balloons {
+            font-size: 50px;
+            color: #1e90ff;
+            margin-top: 20px;
+        }
+        .signature {
+            margin-top: 50px;
+            font-size: 1.2em;
+            font-style: italic;
+        }
+        .gift-list {
+            margin-top: 30px;
+            font-size: 1.3em;
+        }
+        .gift-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .gift-list li {
+            margin: 10px 0;
+            cursor: pointer;
+            color: #ff6347;
+            font-weight: bold;
+        }
+        .gift-list li:hover {
+            text-decoration: underline;
+        }
+        .gift-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 300px;
+            height: auto;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>🎉 Selamat ulang tahun!! 🎉</h1>
+    <div class="message">Maaf kadonya telat tapi semoga sehat dan diberkati selalu</div>
+    <div class="cake">🎂</div>
+    <div class="balloons">🎈🎈🎈</div>
+
+    <!-- Daftar Kado -->
+    <div class="gift-list">
+        <h2>Nih ada kado dibawah </h2>
+        <ul>
+            <li onclick="showGift('teddy')">🎁 1</li>
+            <li onclick="showGift('bike')">🎁 2</li>
+            <li onclick="showGift('watch')">🎁 3</li>
+            <li onclick="showGift('1')">🎁 4</li>
+            <li onclick="showGift('yamada')">🎁 5</li>
+            <li onclick="showGift('fei')">🎁 6</li>
+        </ul>
+    </div>
+
+    <!-- Gambar Kado -->
+    <img id="giftImage" class="gift-image" src="" alt="Gift Image">
+
+    <div class="signature">-Charles</div>
+
+    <script>
+        // Fungsi untuk menampilkan gambar kado
+        function showGift(gift) {
+            var giftImage = document.getElementById('giftImage');
+            if (gift === 'teddy') {
+                giftImage.src = 'scar1.jpg'; // Ganti dengan URL gambar sebenarnya
+            } else if (gift === 'bike') {
+                giftImage.src = 'kaz.jpg'; // Ganti dengan URL gambar sebenarnya
+            } else if (gift === 'watch') {
+                giftImage.src = 'feit.jpg'; // Ganti dengan URL gambar sebenarnya
+            }
+            else if (gift === '1') {
+                giftImage.src = 'kila.jpg';
+            }
+            else if (gift === 'yamada') {
+                giftImage.src = 'yama.jpg';
+            }
+            else if (gift === 'fei') {
+                giftImage.src = 'fei.jpg';
+            }
+            giftImage.style.display = 'block'; // Tampilkan gambar
+        }
+    </script>
+</body>
+</html>
